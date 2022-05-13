@@ -1,0 +1,177 @@
+:root{
+    --primary:#04AA6D;
+    --secondary:#f4c850;
+}
+
+body{
+    font-size: 16px;
+    font-family: Arial;
+    background-color: #f4f4f4;
+
+}
+
+canvas{
+    padding: 20px;
+}
+
+ul,
+ol{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li{
+    margin: 0;
+}
+
+a{
+    color: white;
+    text-decoration: underline;
+}
+a:active{
+    color: white;
+}
+.heading{
+    color:var(--primary);
+    text-align: center;
+}
+.c-column{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.c-column:not(:last-child){
+margin-bottom: 15px;    
+}
+
+.mem-input{
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  color: var(--primary);
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  font-size: 24px;
+
+}
+.mem-input::placeholder{
+    color: var(--primary);
+}
+
+.mem-label{
+padding-bottom: 10px;
+color: var(--primary);
+}
+  
+.mem-wrapper{
+    margin: 0 auto;
+    padding: 25px 0px;
+    width: 550px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mem-generator input{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mem-download__wrapper{
+    position: relative;
+    display: inline-block;}
+
+    
+
+.mem-download{
+position: absolute;
+width: 100%;
+min-width: 150px;
+border-radius:10px;
+padding: 10px;
+
+overflow: auto;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+opacity: 0;
+visibility:hidden;
+pointer-events: all;
+transform: translate(0px ,0px);
+
+transition: 0.3s;
+}
+
+
+.mem-download__item a{
+    color: var(--primary);
+    text-decoration: none;
+    transition: 0.3s;
+
+  
+   }
+
+   .mem-download__item a:hover{
+    color: var(--secondary);
+   }
+
+.mem-download__item:not(:last-child){
+padding-bottom: 10px;
+}
+
+
+.mem-download__button {
+    background-color: var(--primary);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius:10px;
+    transition: 0.3s;
+    cursor: pointer;
+
+  }
+
+  input::-webkit-file-upload-button  {
+    background-color: var(--primary);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius:10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+  input[type="file" i] {
+      display: block;
+    appearance: none;
+    cursor: pointer;
+    align-items: baseline;
+    color: var(--primary);
+  }
+  .mem-download__wrapper:hover .mem-download__button{
+      background: var(--secondary);
+  }
+.mem-download__wrapper:hover .mem-download{
+opacity: 1;
+visibility: visible;
+pointer-events: all;
+transform: translate(-30px, 0px);}
+
+    
+.mem-download__button{
+    padding: 8px 16px;
+
+}
+
+#mem{
+    width: 100%;
+    max-height: 250px;
+
+    object-fit: contain;
+}
